@@ -1,67 +1,87 @@
 @import "tailwindcss";
 
-/* ===== CSS VARIABLES POUR LE THÈME ===== */
+/* ===== CSS VARIABLES - CHARTE GRAPHIQUE 42 ===== */
+
+/* Couleurs principales (Charte 42) */
 :root {
-  /* Mode clair (défaut) */
-  --surface-primary: #ffffff;
-  --surface-secondary: #f9fafb;    /* gray-50 */
-  --surface-tertiary: #f3f4f6;     /* gray-100 */
+  /* Couleurs primaires - Charte Graphique 42 */
+  --color-42-blue: #00BABC;
+  --color-noir: #1b1b1b;
+  --color-blanc: #ffffff;
   
-  --text-primary: #111827;         /* gray-900 */
-  --text-secondary: #4b5563;       /* gray-600 */
-  --text-muted: #6b7280;           /* gray-500 */
-  
-  --border-default: #e5e7eb;       /* gray-200 */
-  --border-subtle: #f3f4f6;        /* gray-100 */
-  
-  --primary: #2563eb;              /* blue-600 */
-  --primary-hover: #1d4ed8;        /* blue-700 */
+  /* Palette secondaire - Charte Graphique 42 */
+  --color-bubbles: #E7FEFE;
+  --color-bright-gray: #E6F4F1;
+  --color-dark-slate-gray: #324848;
+  --color-cadet-gray: #95B0B0;
+  --color-cg-blue: #048091;
+  --color-royal-pink: #ED3491;
+  --color-light-cobalt-blue: #96A3EB;
+  --color-dark-cerulean: #173D7A;
+  --color-violet: #66008C;
 }
 
+/* Mode clair (défaut) - Basé sur la palette Minimalist de 42 */
+:root {
+  --surface-primary: var(--color-blanc);
+  --surface-secondary: var(--color-bubbles);
+  --surface-tertiary: var(--color-bright-gray);
+  
+  --text-primary: var(--color-noir);
+  --text-secondary: var(--color-dark-slate-gray);
+  --text-muted: var(--color-cadet-gray);
+  
+  --border-default: var(--color-cadet-gray);
+  --border-subtle: var(--color-bubbles);
+  
+  --primary: var(--color-42-blue);
+  --primary-hover: var(--color-cg-blue);
+}
+
+/* Mode sombre (auto) - Adapté à la charte 42 */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Mode sombre (auto) */
-    --surface-primary: #000000;    /* black */
-    --surface-secondary: #09090b;  /* zinc-950 */
-    --surface-tertiary: #18181b;   /* zinc-900 */
+    --surface-primary: var(--color-noir);
+    --surface-secondary: #0a0f10;
+    --surface-tertiary: var(--color-dark-slate-gray);
     
-    --text-primary: #ffffff;
-    --text-secondary: #9ca3af;     /* zinc-400 */
-    --text-muted: #6b7280;         /* gray-500 */
+    --text-primary: var(--color-blanc);
+    --text-secondary: var(--color-light-cobalt-blue);
+    --text-muted: var(--color-cadet-gray);
     
-    --border-default: #27272a;     /* zinc-800 */
-    --border-subtle: #18181b;      /* zinc-900 */
+    --border-default: var(--color-cg-blue);
+    --border-subtle: var(--color-dark-slate-gray);
     
-    --primary: #3b82f6;            /* blue-500 */
-    --primary-hover: #60a5fa;      /* blue-400 */
+    --primary: var(--color-42-blue);
+    --primary-hover: var(--color-light-cobalt-blue);
   }
 }
 
-/* ===== CLASSE POUR FORCER UN THÈME (toggle) ===== */
+/* ===== FORCER UN THÈME VIA CLASSE (toggle) ===== */
 [data-theme="dark"] {
-  --surface-primary: #000000;
-  --surface-secondary: #09090b;
-  --surface-tertiary: #18181b;
-  --text-primary: #ffffff;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
-  --border-default: #27272a;
-  --border-subtle: #18181b;
-  --primary: #3b82f6;
-  --primary-hover: #60a5fa;
+  --surface-primary: var(--color-noir);
+  --surface-secondary: #0a0f10;
+  --surface-tertiary: var(--color-dark-slate-gray);
+  --text-primary: var(--color-blanc);
+  --text-secondary: var(--color-light-cobalt-blue);
+  --text-muted: var(--color-cadet-gray);
+  --border-default: var(--color-cg-blue);
+  --border-subtle: var(--color-dark-slate-gray);
+  --primary: var(--color-42-blue);
+  --primary-hover: var(--color-light-cobalt-blue);
 }
 
 [data-theme="light"] {
-  --surface-primary: #ffffff;
-  --surface-secondary: #f9fafb;
-  --surface-tertiary: #f3f4f6;
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #6b7280;
-  --border-default: #e5e7eb;
-  --border-subtle: #f3f4f6;
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
+  --surface-primary: var(--color-blanc);
+  --surface-secondary: var(--color-bubbles);
+  --surface-tertiary: var(--color-bright-gray);
+  --text-primary: var(--color-noir);
+  --text-secondary: var(--color-dark-slate-gray);
+  --text-muted: var(--color-cadet-gray);
+  --border-default: var(--color-cadet-gray);
+  --border-subtle: var(--color-bubbles);
+  --primary: var(--color-42-blue);
+  --primary-hover: var(--color-cg-blue);
 }
 
 /* ===== BASE STYLES ===== */
@@ -132,3 +152,4 @@ html {
     background-color: var(--surface-secondary);
   }
 }
+

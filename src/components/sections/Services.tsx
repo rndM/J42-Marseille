@@ -18,7 +18,7 @@ export default function Services() {
 
           {/* Carte 1 */}
           <div className="card-service">
-            <div className="w-12 h-12 bg-blue-600 rounded-lg mb-4 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{backgroundColor: 'var(--primary)'}}>
               <Code className="text-white" size={24} />
             </div>
             <h3 className="text-xl font-semibold text-text-primary mb-2">
@@ -31,7 +31,7 @@ export default function Services() {
 
           {/* Carte 2 */}
           <div className="card-service">
-            <div className="w-12 h-12 bg-blue-600 rounded-lg mb-4 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{backgroundColor: 'var(--primary)'}}>
               <Lightbulb className="text-white" size={24} />
             </div>
             <h3 className="text-xl font-semibold text-text-primary mb-2">
@@ -44,7 +44,7 @@ export default function Services() {
 
           {/* Carte 3 */}
           <div className="card-service">
-            <div className="w-12 h-12 bg-blue-600 rounded-lg mb-4 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{backgroundColor: 'var(--primary)'}}>
               <GraduationCap className="text-white" size={24} />
             </div>
             <h3 className="text-xl font-semibold text-text-primary mb-2">
