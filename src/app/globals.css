@@ -1,30 +1,134 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
+/* ===== CSS VARIABLES POUR LE THÈME ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Mode clair (défaut) */
+  --surface-primary: #ffffff;
+  --surface-secondary: #f9fafb;    /* gray-50 */
+  --surface-tertiary: #f3f4f6;     /* gray-100 */
+  
+  --text-primary: #111827;         /* gray-900 */
+  --text-secondary: #4b5563;       /* gray-600 */
+  --text-muted: #6b7280;           /* gray-500 */
+  
+  --border-default: #e5e7eb;       /* gray-200 */
+  --border-subtle: #f3f4f6;        /* gray-100 */
+  
+  --primary: #2563eb;              /* blue-600 */
+  --primary-hover: #1d4ed8;        /* blue-700 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Mode sombre (auto) */
+    --surface-primary: #000000;    /* black */
+    --surface-secondary: #09090b;  /* zinc-950 */
+    --surface-tertiary: #18181b;   /* zinc-900 */
+    
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;     /* zinc-400 */
+    --text-muted: #6b7280;         /* gray-500 */
+    
+    --border-default: #27272a;     /* zinc-800 */
+    --border-subtle: #18181b;      /* zinc-900 */
+    
+    --primary: #3b82f6;            /* blue-500 */
+    --primary-hover: #60a5fa;      /* blue-400 */
   }
+}
+
+/* ===== CLASSE POUR FORCER UN THÈME (futur toggle) ===== */
+[data-theme="dark"] {
+  --surface-primary: #000000;
+  --surface-secondary: #09090b;
+  --surface-tertiary: #18181b;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --border-default: #27272a;
+  --border-subtle: #18181b;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+}
+
+[data-theme="light"] {
+  --surface-primary: #ffffff;
+  --surface-secondary: #f9fafb;
+  --surface-tertiary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --border-default: #e5e7eb;
+  --border-subtle: #f3f4f6;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  color: var(--text-primary);
+  background: var(--surface-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ===== UTILITAIRES SÉMANTIQUES (@layer components) ===== */
+@layer components {
+  /* Boutons */
+  .btn-primary {
+    @apply px-8 py-4 text-white font-medium rounded-lg transition shadow-lg hover:shadow-xl inline-block;
+    background-color: var(--primary);
+  }
+  .btn-primary:hover {
+    background-color: var(--primary-hover);
+  }
+
+  /* Conteneurs */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  /* Typographie */
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-center;
+    color: var(--text-primary);
+  }
+
+  .section-subtitle {
+    @apply max-w-2xl mx-auto text-center mb-12;
+    color: var(--text-secondary);
+  }
+
+  /* Cartes */
+  .card-service {
+    @apply border rounded-lg p-6 transition;
+    background-color: var(--surface-tertiary);
+    border-color: var(--border-default);
+  }
+  .card-service:hover {
+    border-color: var(--primary);
+  }
+
+  /* Liens */
+  .nav-link,
+  .footer-link {
+    @apply transition;
+    color: var(--text-secondary);
+  }
+  .nav-link:hover,
+  .footer-link:hover {
+    color: var(--primary);
+  }
+
+  /* Sections - alternance de fond */
+  .section-bg-primary {
+    background-color: var(--surface-primary);
+  }
+  .section-bg-secondary {
+    background-color: var(--surface-secondary);
+  }
 }

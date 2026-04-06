@@ -2,52 +2,42 @@
 
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import ThemeToggle from '@/components/ThemeToggle'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 w-full bg-gray-50 dark:bg-zinc-950 border-b border-gray-200 dark:border-zinc-800 z-50">
+    <nav className="fixed top-0 w-full section-bg-secondary border-b border-border-default z-50">
       {/* Conteneur principal */}
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="section-container py-3 flex justify-between items-center">
         {/* Logo */}
         <div>
-          <span className="font-bold text-xl text-gray-900 dark:text-white">
+          <span className="font-bold text-xl text-text-primary">
             JE 42 Marseille
           </span>
         </div>
 
         {/* Menu Desktop */}
-        <div className="hidden md:flex gap-6">
-          <a
-            href="#accueil"
-            className="text-gray-700 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
-          >
+        <div className="hidden md:flex gap-6 items-center">
+          <a href="#accueil" className="nav-link">
             Accueil
           </a>
-          <a
-            href="#services"
-            className="text-gray-700 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
-          >
+          <a href="#services" className="nav-link">
             Services
           </a>
-          <a
-            href="#apropos"
-            className="text-gray-700 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
-          >
+          <a href="#apropos" className="nav-link">
             À propos
           </a>
-          <a
-            href="#contact"
-            className="text-gray-700 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
-          >
+          <a href="#contact" className="nav-link">
             Contact
           </a>
+          <ThemeToggle />
         </div>
 
         {/* Bouton Hamburger */}
         <button
-          className="md:hidden p-2 text-gray-700 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
+          className="md:hidden p-2 nav-link"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Menu"
         >
@@ -57,35 +47,38 @@ export default function Navbar() {
 
       {/* Menu Mobile */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-zinc-950 border-t border-gray-200 dark:border-zinc-800 px-4 py-3 flex flex-col gap-3">
+        <div className="md:hidden section-bg-secondary border-t border-border-default px-4 py-3 flex flex-col gap-3">
           <a
             href="#accueil"
             onClick={() => setIsOpen(false)}
-            className="py-2 text-gray-700 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400"
+            className="py-2 nav-link"
           >
             Accueil
           </a>
           <a
             href="#services"
             onClick={() => setIsOpen(false)}
-            className="py-2 text-gray-700 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400"
+            className="py-2 nav-link"
           >
             Services
           </a>
           <a
             href="#apropos"
             onClick={() => setIsOpen(false)}
-            className="py-2 text-gray-700 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400"
+            className="py-2 nav-link"
           >
             À propos
           </a>
           <a
             href="#contact"
             onClick={() => setIsOpen(false)}
-            className="py-2 text-gray-700 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400"
+            className="py-2 nav-link"
           >
             Contact
           </a>
+          <div className="pt-2 border-t border-border-default">
+            <ThemeToggle />
+          </div>
         </div>
       )}
     </nav>
