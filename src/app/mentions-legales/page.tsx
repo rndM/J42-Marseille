@@ -20,7 +20,7 @@ export default function MentionsLegales() {
               Ayant pour siège social 19 rue Henri Barbusse – 13001 Marseille
             </p>
             <p className="text-text-secondary">
-              Adresse email : contact@j42marseille.fr
+              Adresse email : junior42marseille@gmail.com
             </p>
           </section>
 
