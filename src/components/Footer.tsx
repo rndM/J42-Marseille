@@ -47,23 +47,9 @@ export default function Footer() {
             <h4 className="font-semibold text-text-primary mb-4">
               Suivez-nous
             </h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="footer-link">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer-link">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer-link">
-                  Instagram
-                </a>
-              </li>
-            </ul>
+            <p className="text-text-secondary text-sm italic">
+              Réseaux sociaux à venir
+            </p>
           </div>
         </div>
 

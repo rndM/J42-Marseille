@@ -106,11 +106,9 @@ export default function Contact() {
               
               <div>
                 <h3 className="text-text-primary font-semibold mb-2">🔗 Réseaux</h3>
-                <div className="flex gap-4">
-                  <a href="#" className="text-text-secondary hover:text-primary transition">LinkedIn</a>
-                  <a href="#" className="text-text-secondary hover:text-primary transition">GitHub</a>
-                  <a href="#" className="text-text-secondary hover:text-primary transition">Instagram</a>
-                </div>
+                <p className="text-text-secondary text-sm italic">
+                  Réseaux sociaux à venir
+                </p>
               </div>
 
             </div>

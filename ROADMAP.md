@@ -82,13 +82,13 @@ Landing page responsive - Next.js + Tailwind - Déploiement Vercel
 
 - [x] Formulaire (nom, email, message)
 - [x] Infos contact
-- [x] Réseaux sociaux (liens placeholder)
+- [x] Réseaux sociaux (masqués - à venir)
 
 ### Footer
 
 - [x] Mentions légales (page créée)
 - [x] Copyright
-- [x] Liens sociaux (placeholder)
+- [x] Liens sociaux (masqués - à venir)
 
 ---
 
