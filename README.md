@@ -1,7 +1,7 @@
 
 # J42 Marseille
 
-Site vitrine officiel de l'assocation entrepreneuriale de l’école 42 Marseille, développé bénévolement pour accompagner l’association dans sa visibilité en ligne et faciliter la prise de contact avec ses prospects.
+Site vitrine officiel de l'association entrepreneuriale de l’école 42 Marseille, développé bénévolement pour accompagner l’association dans sa visibilité en ligne et faciliter la prise de contact avec ses prospects.
 
 L’application est déployée ici : [https://j42marseille.vercel.app/](https://j42marseille.vercel.app/)
 
