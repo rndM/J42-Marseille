@@ -32,6 +32,9 @@ export default function Navbar() {
           <a href="#contact" className="nav-link">
             Contact
           </a>
+          <a href="https://voting-app-pi-one.vercel.app/" className="nav-link" target="_blank" rel="noopener noreferrer">
+            Espace membre
+          </a>
           <ThemeToggle />
         </div>
 
@@ -75,6 +78,15 @@ export default function Navbar() {
             className="py-2 nav-link"
           >
             Contact
+          </a>
+          <a
+            href="https://voting-app-pi-one.vercel.app/"
+            onClick={() => setIsOpen(false)}
+            className="py-2 nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Espace membre
           </a>
           <div className="pt-2 border-t border-border-default">
             <ThemeToggle />
