@@ -31,19 +31,19 @@ export default function LoginPage() {
   }
 
   return (
-    <main style={{ display: 'flex', justifyContent: 'center', marginTop: '20vh' }}>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 12, width: 300 }}>
-        <h2>Protected Page</h2>
+    <main className="flex justify-center mt-[20vh]">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-75">
+        <h2 className='text-center mb-8 text-2xl'>Access Protected Page</h2>
         <input
           type="password"
           placeholder="Enter password"
           value={password}
           onChange={e => setPassword(e.target.value)}
           required
-          style={{ padding: 8, fontSize: 16 }}
+          className="p-2 text-base mb-4"
         />
-        {error && <p style={{ color: 'red', margin: 0 }}>{error}</p>}
-        <button type="submit" disabled={loading} style={{ padding: 8, fontSize: 16 }}>
+        {error && <p className="text-red-500 m-0">{error}</p>}
+        <button type="submit" disabled={loading} className="p-2 text-base text-black cursor-pointer bg-amber-500">
           {loading ? 'Checking...' : 'Enter'}
         </button>
       </form>
