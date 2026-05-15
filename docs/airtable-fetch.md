@@ -2,7 +2,7 @@ That's the right approach. Here's the complete code:
 
 **`.env.local`**
 ```
-AIRTABLE_API_KEY=your_api_key_here
+AIRTABLE_ACCESS_TOKEN=your_api_key_here
 AIRTABLE_BASE_ID=your_base_id_here
 AIRTABLE_TABLE_NAME=your_table_name_here
 ```
@@ -19,7 +19,7 @@ export type AirtableRecord<T> = {
 
 export async function fetchAirtableRecords<T>(table: string): Promise<AirtableRecord<T>[]> {
   const baseId = process.env.AIRTABLE_BASE_ID;
-  const apiKey = process.env.AIRTABLE_API_KEY;
+  const apiKey = process.env.AIRTABLE_ACCESS_TOKEN;
 
   const res = await fetch(
     `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(table)}`,

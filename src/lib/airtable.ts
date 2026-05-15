@@ -4,17 +4,18 @@ export type AirtableRecord<T> = {
   createdTime: string;
 };
 
-export async function fetchAirtableRecords<T>(table: string): Promise<AirtableRecord<T>[]> {
+export default async function fetchAirtableRecords<T>(table: string): Promise<AirtableRecord<T>[]> {
   const baseId = process.env.AIRTABLE_BASE_ID;
-  const apiKey = process.env.AIRTABLE_API_KEY;
-
+  const accessToken = process.env.AIRTABLE_ACCESS_TOKEN;
+	console.log("baseId:", baseId);
+  console.log("token starts with:", accessToken?.slice(0, 6));
   const res = await fetch(
     `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(table)}`,
     {
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${accessToken}`,
       },
-      next: { revalidate: 60 }, // cache for 60 seconds, or use 0 to always fetch fresh
+      next: { revalidate: 3600 }, // cache for 60 seconds, or use 0 to always fetch fresh
     }
   );
 
@@ -23,5 +24,6 @@ export async function fetchAirtableRecords<T>(table: string): Promise<AirtableRe
   }
 
   const data = await res.json();
+	console.log(data)
   return data.records;
 }
