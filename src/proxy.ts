@@ -13,5 +13,5 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/profiles'], // 👈 change to your protected route(s)
+  matcher: ['/profiles'],
 };
