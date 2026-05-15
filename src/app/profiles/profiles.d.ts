@@ -1,9 +1,11 @@
 
-// Define your fields based on your Airtable schema
 type Profile = {
-	id: string;
 	Title: string;
 	Description: string;
+	Notes: string;
+	Tags: string[];
+	Status: string;
+	Owner: string;
 	Category: string;
-	// add your actual fields here
+	'Date Added': Date;
 };

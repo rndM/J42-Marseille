@@ -7,8 +7,6 @@ export type AirtableRecord<T> = {
 export default async function fetchAirtableRecords<T>(table: string): Promise<AirtableRecord<T>[]> {
   const baseId = process.env.AIRTABLE_BASE_ID;
   const accessToken = process.env.AIRTABLE_ACCESS_TOKEN;
-	console.log("baseId:", baseId);
-  console.log("token starts with:", accessToken?.slice(0, 6));
   const res = await fetch(
     `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(table)}`,
     {
@@ -24,6 +22,5 @@ export default async function fetchAirtableRecords<T>(table: string): Promise<Ai
   }
 
   const data = await res.json();
-	console.log(data)
   return data.records;
 }
