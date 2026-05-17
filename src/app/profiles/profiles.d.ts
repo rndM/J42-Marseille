@@ -1,11 +1,16 @@
 
 type Profile = {
-	Title: string;
-	Description: string;
-	Notes: string;
-	Tags: string[];
+	LastName: string;
+	FirstName: string;
+	PortfolioLink: string;
+	Linkedin: string;
+	MasteredSkills: string;
+	OtherSkills: string;
+	SkillsToDevelop: string;
 	Status: string;
-	Owner: string;
-	Category: string;
-	'Date Added': Date;
+	SoftSkills: string;
+	Frequency: string;
+	EnglishLevel: string;
+	EnglishCertification: string;
+	Level42: string;
 };
