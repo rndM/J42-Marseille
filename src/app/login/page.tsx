@@ -1,16 +1,15 @@
 'use client';
-
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e: React.SubmitEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setError('');
@@ -31,22 +30,30 @@ export default function LoginPage() {
   }
 
   return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-75">
+      <h2 className='text-center mb-8 text-2xl'>Access Protected Page</h2>
+      <input
+        type="password"
+        placeholder="Enter password"
+        value={password}
+        onChange={e => setPassword(e.target.value)}
+        required
+        className="p-2 text-base mb-4"
+      />
+      {error && <p className="text-red-500 m-0">{error}</p>}
+      <button type="submit" disabled={loading} className="p-2 text-base text-black cursor-pointer bg-amber-500">
+        {loading ? 'Checking...' : 'Enter'}
+      </button>
+    </form>
+  );
+}
+
+export default function LoginPage() {
+  return (
     <main className="flex justify-center mt-[20vh]">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-75">
-        <h2 className='text-center mb-8 text-2xl'>Access Protected Page</h2>
-        <input
-          type="password"
-          placeholder="Enter password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          required
-          className="p-2 text-base mb-4"
-        />
-        {error && <p className="text-red-500 m-0">{error}</p>}
-        <button type="submit" disabled={loading} className="p-2 text-base text-black cursor-pointer bg-amber-500">
-          {loading ? 'Checking...' : 'Enter'}
-        </button>
-      </form>
+      <Suspense>
+        <LoginForm />
+      </Suspense>
     </main>
   );
 }

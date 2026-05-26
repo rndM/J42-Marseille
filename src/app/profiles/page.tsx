@@ -15,10 +15,11 @@ export default async function ProfilesPage() {
       ...r.fields,
     }));
   return (
-    <main>
-      <h1>42 Students Profiles</h1>
-      <p>Only accessible with the correct password.</p>
-      <Logoutbutton />
+    <main className='pt-8'>
+      <h1 className='text-3xl font-semibold text-center'>42 Students Profiles</h1>
+      <div className='w-full grid place-items-center mt-8'>
+        <Logoutbutton className='cursor-pointer' />
+      </div>
       <ProfilesComponent profiles={profiles} />
     </main>);
   }
