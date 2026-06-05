@@ -78,11 +78,13 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 flex flex-col gap-4">
       {/* Mastered */}
-      <h3 className="text-black text-center text-2xl font-semibold">Filters</h3>
+      <h3 className="text-lg text-center text-gray-500 uppercase tracking-widest font-medium">
+        Filters
+      </h3>
       <div>
-        <div className="flex items-center gap-2 mb-2">
+        <div className="flex items-center gap-2 mb-4">
           <span className="w-2 h-2 rounded-full bg-teal-500 shrink-0" />
-          <p className="text-[11px] text-gray-400 uppercase tracking-wide font-medium">
+          <p className="text-sm text-gray-400 uppercase tracking-wide font-medium">
             Mastered skills
           </p>
         </div>
@@ -100,13 +102,13 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
       </div>
 
       {/* Divider */}
-      <hr className="border-gray-100" />
+      <hr className="border-gray-100 my-4" />
 
       {/* To develop */}
       <div>
-        <div className="flex items-center gap-2 mb-2">
+        <div className="flex items-center gap-2 mb-4">
           <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0" />
-          <p className="text-[11px] text-gray-400 uppercase tracking-wide font-medium">
+          <p className="text-sm text-gray-400 uppercase tracking-wide font-medium">
             Skills to develop
           </p>
         </div>

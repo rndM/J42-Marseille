@@ -41,7 +41,7 @@ function LoginForm() {
         className="p-2 text-base mb-4"
       />
       {error && <p className="text-red-500 m-0">{error}</p>}
-      <button type="submit" disabled={loading} className="p-2 text-base text-black cursor-pointer bg-amber-500">
+      <button type="submit" disabled={loading} className="p-2 text-base text-black cursor-pointer bg-teal-200">
         {loading ? 'Checking...' : 'Enter'}
       </button>
     </form>
