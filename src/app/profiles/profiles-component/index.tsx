@@ -69,7 +69,7 @@ export function ProfileCard({ profile }: { profile: Profile }) {
   const softSkills      = tags(profile.SoftSkills);
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-5 grid grid-cols-[1fr_1.4fr] gap-6">
+    <div className="bg-white border border-gray-200 rounded-xl p-8 grid grid-cols-[1fr_1.4fr] gap-6">
 
       {/* LEFT COLUMN */}
       <div className="border-r border-gray-100 pr-6 flex flex-col">

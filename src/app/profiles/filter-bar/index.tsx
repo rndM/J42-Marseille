@@ -76,7 +76,7 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
   const hasActive = filters.mastered.length > 0 || filters.toDevelop.length > 0;
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 flex flex-col gap-4">
+    <div className="bg-white border border-gray-200 rounded-xl pt-5 px-12 pb-10 mb-6 flex flex-col gap-4">
       {/* Mastered */}
       <h3 className="text-lg text-center text-gray-500 uppercase tracking-widest font-medium">
         Filters

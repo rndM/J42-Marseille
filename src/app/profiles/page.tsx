@@ -2,6 +2,8 @@
 import Logoutbutton from './logout-btn';
 import ProfilesComponent from './profiles-component';
 import fetchAirtableRecords from '@/lib/airtable';
+import GeneralHeader from '@/components/general-header';
+import GeneralFooter from '@/components/general-footer';
 
 export const dynamic = 'force-dynamic'; // already have this from auth
 
@@ -15,29 +17,26 @@ export default async function ProfilesPage() {
       ...r.fields,
     }));
   return (
-    // <main className='pt-8'>
-    //   <h1 className='text-3xl font-semibold text-center'>42 Students Profiles</h1>
-    //   <div className='w-full grid place-items-center mt-8'>
-    //     <Logoutbutton className='cursor-pointer' />
-    //   </div>
-    //   <ProfilesComponent profiles={profiles} />
-    // </main>
-    <main className='min-h-screen bg-gray-50 px-4 py-10'>
-        <div className='max-w-6xl mx-auto'>
+      <>
+          <GeneralHeader />
+            <main className='min-h-screen px-4 py-10 mt-16'>
+                <div className='max-w-6xl mx-auto'>
 
-            {/* Header section */}
-            <div className='flex items-center justify-between mb-10'>
-            <h1 className='text-3xl font-semibold text-gray-900 tracking-tight'>
-                42 Students Profiles
-            </h1>
-            <Logoutbutton className='cursor-pointer' />
-            </div>
+                    {/* Header section */}
+                    <div className='flex items-center justify-between mb-10'>
+                    <h1 className='text-3xl font-semibold tracking-tight'>
+                        42 Students Profiles
+                    </h1>
+                    <Logoutbutton className='cursor-pointer' />
+                    </div>
 
-            {/* Profiles */}
-            <ProfilesComponent profiles={profiles} />
+                    {/* Profiles */}
+                    <ProfilesComponent profiles={profiles} />
 
-        </div>
-    </main>
+                </div>
+            </main>
+            <GeneralFooter />
+        </>
     );
   }
   catch(error) {

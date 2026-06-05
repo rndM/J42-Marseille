@@ -1,6 +1,8 @@
 'use client';
 import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import GeneralHeader from '@/components/general-header';
+import GeneralFooter from '@/components/general-footer';
 
 function LoginForm() {
   const router = useRouter();
@@ -30,30 +32,36 @@ function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-75">
-      <h2 className='text-center mb-8 text-2xl'>Access Protected Page</h2>
-      <input
-        type="password"
-        placeholder="Enter password"
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-        required
-        className="p-2 text-base mb-4"
-      />
-      {error && <p className="text-red-500 m-0">{error}</p>}
-      <button type="submit" disabled={loading} className="p-2 text-base text-black cursor-pointer bg-teal-200">
-        {loading ? 'Checking...' : 'Enter'}
-      </button>
-    </form>
+        <main>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-75 mb-128">
+                <h2 className='text-center mb-8 text-2xl'>Access Protected Page</h2>
+                <input
+                    type="password"
+                    placeholder="Enter password"
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                    required
+                    className="p-2 text-base mb-4 border-2 border-slate-300"
+                />
+                {error && <p className="text-red-500 m-0">{error}</p>}
+                <button type="submit" disabled={loading} className="p-2 text-base text-black cursor-pointer bg-teal-200">
+                    {loading ? 'Checking...' : 'Enter'}
+                </button>
+            </form>
+        </main>
   );
 }
 
 export default function LoginPage() {
   return (
-    <main className="flex justify-center mt-[20vh]">
-      <Suspense>
-        <LoginForm />
-      </Suspense>
-    </main>
+    <>
+        <GeneralHeader />
+            <main className="flex justify-center mt-[20vh]">
+                <Suspense>
+                    <LoginForm />
+                </Suspense>
+            </main>
+        <GeneralFooter />
+    </>
   );
 }
