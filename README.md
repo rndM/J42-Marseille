@@ -1,5 +1,13 @@
 # J42 Marseille
 
+---
+
+## 📚 Navigation
+
+**[English Version](README.md)** | **[Version Française](README_FR.md)**
+
+---
+
 Official showcase site of the entrepreneurial association of 42 Marseille, developed voluntarily to support the association's online visibility and facilitate contact with prospects.
 
 The application is deployed here: [https://j42marseille.vercel.app/](https://j42marseille.vercel.app/)
