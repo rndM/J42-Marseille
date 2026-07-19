@@ -1,24 +1,23 @@
-
 # J42 Marseille
 
-Site vitrine officiel de l'association entrepreneuriale de l’école 42 Marseille, développé bénévolement pour accompagner l’association dans sa visibilité en ligne et faciliter la prise de contact avec ses prospects.
+Official showcase site of the entrepreneurial association of 42 Marseille, developed voluntarily to support the association's online visibility and facilitate contact with prospects.
 
-L’application est déployée ici : [https://j42marseille.vercel.app/](https://j42marseille.vercel.app/)
+The application is deployed here: [https://j42marseille.vercel.app/](https://j42marseille.vercel.app/)
 
-## Présentation
+## Overview
 
-Ce projet a pour objectif de proposer une présence web claire, sobre et professionnelle à la J42 Marseille. Il met en avant l’association, ses services et ses coordonnées, avec une navigation simple et une expérience centrée sur la prise de contact.
+This project aims to provide a clear, clean and professional web presence for J42 Marseille. It highlights the association, its services and contact information, with simple navigation and an experience centered on making contact.
 
-## Fonctionnalités
+## Features
 
-- Page d’accueil avec présentation de l'association.
-- Mise en avant des services proposés : développement web, conseil digital et formation.
-- Section À propos pour expliquer la mission de l’association.
-- Formulaire de contact générant un email pré-rempli via le client de messagerie.
-- Navigation responsive avec menu mobile.
-- Toggle de thème (système, clair, sombre) avec persistance en localStorage.
-- Interface structurée en sections pour une lecture rapide sur desktop et mobile.
-- Métadonnées SEO et partage social (Open Graph et Twitter Card).
+- Home page with association presentation.
+- Highlighting of offered services: web development, digital consulting and training.
+- About section explaining the association's mission.
+- Contact form generating a pre-filled email via the mail client.
+- Responsive navigation with mobile menu.
+- Theme toggle (system, light, dark) with localStorage persistence.
+- Section-structured interface for quick reading on desktop and mobile.
+- SEO metadata and social sharing (Open Graph and Twitter Card).
 
 ## Technologies
 
@@ -28,32 +27,32 @@ Ce projet a pour objectif de proposer une présence web claire, sobre et profess
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Lucide React](https://lucide.dev/)
 
-## Structure du projet
+## Project Structure
 
-- [src/app/page.tsx](src/app/page.tsx) : composition de la page d'accueil.
-- [src/app/layout.tsx](src/app/layout.tsx) : layout global et métadonnées.
-- [src/app/globals.css](src/app/globals.css) : styles globaux, variables de thème et classes utilitaires.
-- [src/app/mentions-legales/page.tsx](src/app/mentions-legales/page.tsx) : page des mentions légales.
-- [src/components/Navbar.tsx](src/components/Navbar.tsx) : navigation principale.
-- [src/components/ThemeToggle.tsx](src/components/ThemeToggle.tsx) : bascule de thème (system/light/dark).
-- [src/components/sections/Hero.tsx](src/components/sections/Hero.tsx) : bloc d'introduction.
-- [src/components/sections/Services.tsx](src/components/sections/Services.tsx) : présentation des services.
-- [src/components/sections/About.tsx](src/components/sections/About.tsx) : présentation de l'association.
-- [src/components/sections/Contact.tsx](src/components/sections/Contact.tsx) : formulaire de contact.
-- [src/components/Footer.tsx](src/components/Footer.tsx) : pied de page et liens utiles.
+- [src/app/page.tsx](src/app/page.tsx): home page composition.
+- [src/app/layout.tsx](src/app/layout.tsx): global layout and metadata.
+- [src/app/globals.css](src/app/globals.css): global styles, theme variables and utility classes.
+- [src/app/mentions-legales/page.tsx](src/app/mentions-legales/page.tsx): legal notice page.
+- [src/components/Navbar.tsx](src/components/Navbar.tsx): main navigation.
+- [src/components/ThemeToggle.tsx](src/components/ThemeToggle.tsx): theme toggle (system/light/dark).
+- [src/components/sections/Hero.tsx](src/components/sections/Hero.tsx): introduction block.
+- [src/components/sections/Services.tsx](src/components/sections/Services.tsx): services presentation.
+- [src/components/sections/About.tsx](src/components/sections/About.tsx): association presentation.
+- [src/components/sections/Contact.tsx](src/components/sections/Contact.tsx): contact form.
+- [src/components/Footer.tsx](src/components/Footer.tsx): footer and useful links.
 
-## Lancer le projet en local
+## Running Locally
 
-Prérequis : Node.js (version LTS recommandée) et npm.
+Prerequisites: Node.js (LTS version recommended) and npm.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Le site sera disponible en local à l’adresse suivante : [http://localhost:3000](http://localhost:3000)
+The site will be available locally at: [http://localhost:3000](http://localhost:3000)
 
-## Scripts disponibles
+## Available Scripts
 
 ```bash
 npm run dev
@@ -62,15 +61,14 @@ npm run start
 npm run lint
 ```
 
-## Déploiement
+## Deployment
 
-Le site est pensé pour un déploiement simple sur Vercel. La configuration Next.js permet une mise en production rapide après construction du projet.
+The site is designed for easy deployment on Vercel. Next.js configuration enables fast production deployment after building the project.
 
-## État actuel
+## Current Status
 
-- Les réseaux sociaux ne sont pas encore disponibles.
+- Social networks are not yet available.
 
-## À propos du projet
+## About the Project
 
-Ce site a été réalisé bénévolement afin de soutenir la J42 Marseille et de lui offrir un support de communication moderne, lisible et facile à maintenir.
-
+This site was built voluntarily to support J42 Marseille and provide it with a modern, readable and easy-to-maintain communication platform.
