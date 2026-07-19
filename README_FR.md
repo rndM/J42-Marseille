@@ -5,7 +5,7 @@
 
 ## 📚 Navigation
 
-**[English Version](README.md)** | **[Version Française](README_FR.md)**
+**[🇬🇧 English Version](README.md)** | **[🇫🇷 Version Française](README_FR.md)**
 
 ---
 
