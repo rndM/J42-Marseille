@@ -25,10 +25,10 @@ function Tag({
   variant?: 'skill' | 'soft' | 'todo' | 'default';
 }) {
   const styles: Record<string, string> = {
-    skill:   'bg-teal-50 text-teal-800 border-teal-300',
-    soft:    'bg-purple-50 text-purple-800 border-purple-300',
-    todo:    'bg-amber-50 text-amber-800 border-amber-300',
-    default: 'bg-gray-100 text-gray-600 border-gray-200',
+    skill:   'bg-teal-900/50 text-teal-200 border-teal-700',
+    soft:    'bg-purple-900/50 text-purple-200 border-purple-700',
+    todo:    'bg-amber-900/50 text-amber-200 border-amber-700',
+    default: 'bg-surface-tertiary text-text-secondary border-border-default',
   };
   return (
     <span
@@ -47,12 +47,12 @@ function StatusBadge({ status }: { status: string }) {
   return (
     <span
       className={`inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full ${
-        isActive ? 'bg-green-50 text-green-800' : 'bg-amber-50 text-amber-800'
+        isActive ? 'bg-green-900/50 text-green-200' : 'bg-amber-900/50 text-amber-200'
       }`}
     >
       <span
         className={`w-1.5 h-1.5 rounded-full ${
-          isActive ? 'bg-green-600' : 'bg-amber-600'
+          isActive ? 'bg-green-400' : 'bg-amber-400'
         }`}
       />
       {status}
@@ -69,35 +69,35 @@ export function ProfileCard({ profile }: { profile: Profile }) {
   const softSkills      = tags(profile.SoftSkills);
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-8 grid grid-cols-[1fr_1.4fr] gap-6">
+    <div className="bg-surface-primary border border-border-default rounded-xl p-8 grid grid-cols-[1fr_1.4fr] gap-6">
 
       {/* LEFT COLUMN */}
-      <div className="border-r border-gray-100 pr-6 flex flex-col">
-        <div className="w-11 h-11 rounded-full bg-purple-100 flex items-center justify-center text-sm font-medium text-purple-800 mb-3 shrink-0">
+      <div className="border-r border-border-subtle pr-6 flex flex-col">
+        <div className="w-11 h-11 rounded-full bg-purple-900/50 flex items-center justify-center text-sm font-medium text-purple-200 mb-3 shrink-0">
           {initials(profile.FirstName, profile.LastName)}
         </div>
-        <p className="text-base font-medium text-gray-900 leading-tight">
+        <p className="text-base font-medium text-text-primary leading-tight">
           {capitalizeFirstLetter(profile.FirstName)} {profile.LastName.toUpperCase()}
         </p>
-        <p className="text-sm text-gray-400 mt-0.5 mb-4">Level 42: {profile.Level42}</p>
+        <p className="text-sm text-text-muted mt-0.5 mb-4">Level 42: {profile.Level42}</p>
 
-        <hr className="border-gray-100 mb-4" />
+        <hr className="border-border-subtle mb-4" />
 
         <table className="w-full text-sm border-collapse mb-4">
           <tbody>
             <tr>
-              <td className="text-gray-400 py-1">Status</td>
+              <td className="text-text-muted py-1">Status</td>
               <td className="text-right py-1">
                 <StatusBadge status={profile.Status} />
               </td>
             </tr>
             <tr>
-              <td className="text-gray-400 py-1">Frequency</td>
-              <td className="text-right text-gray-600 py-1">{profile.Frequency}</td>
+              <td className="text-text-muted py-1">Frequency</td>
+              <td className="text-right text-text-secondary py-1">{profile.Frequency}</td>
             </tr>
             <tr>
-              <td className="text-gray-400 py-1">English</td>
-              <td className="text-right text-gray-600 py-1">
+              <td className="text-text-muted py-1">English</td>
+              <td className="text-right text-text-secondary py-1">
                 {profile.EnglishLevel}
                 {profile.EnglishCertification ? ` — ${profile.EnglishCertification}` : ''}
               </td>
@@ -105,7 +105,7 @@ export function ProfileCard({ profile }: { profile: Profile }) {
           </tbody>
         </table>
 
-        <hr className="border-gray-100 mb-4" />
+        <hr className="border-border-subtle mb-4" />
 
         <div className="flex flex-col gap-1.5 mt-auto">
           {profile.Linkedin && (
@@ -113,7 +113,7 @@ export function ProfileCard({ profile }: { profile: Profile }) {
               href={profile.Linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-blue-600 hover:underline flex items-center gap-1"
+              className="text-sm text-text-secondary hover:underline flex items-center gap-1"
             >
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
@@ -127,7 +127,7 @@ export function ProfileCard({ profile }: { profile: Profile }) {
               href={profile.PortfolioLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-blue-600 hover:underline flex items-center gap-1"
+              className="text-sm text-text-secondary hover:underline flex items-center gap-1"
             >
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10" />
@@ -144,25 +144,25 @@ export function ProfileCard({ profile }: { profile: Profile }) {
       <div className="flex flex-col gap-4">
         {masteredSkills.length > 0 && (
           <div>
-            <p className="text-[11px] text-gray-400 uppercase tracking-wide mb-1.5">Mastered skills</p>
+            <p className="text-[11px] text-text-muted uppercase tracking-wide mb-1.5">Mastered skills</p>
             <div>{masteredSkills.map((s) => <Tag key={s} label={s} variant="skill" />)}</div>
           </div>
         )}
         {otherSkills.length > 0 && (
           <div>
-            <p className="text-[11px] text-gray-400 uppercase tracking-wide mb-1.5">Other skills</p>
+            <p className="text-[11px] text-text-muted uppercase tracking-wide mb-1.5">Other skills</p>
             <div>{otherSkills.map((s) => <Tag key={s} label={s} variant="default" />)}</div>
           </div>
         )}
         {skillsToDevelop.length > 0 && (
           <div>
-            <p className="text-[11px] text-gray-400 uppercase tracking-wide mb-1.5">To develop</p>
+            <p className="text-[11px] text-text-muted uppercase tracking-wide mb-1.5">To develop</p>
             <div>{skillsToDevelop.map((s) => <Tag key={s} label={s} variant="todo" />)}</div>
           </div>
         )}
         {softSkills.length > 0 && (
           <div>
-            <p className="text-[11px] text-gray-400 uppercase tracking-wide mb-1.5">Soft skills</p>
+            <p className="text-[11px] text-text-muted uppercase tracking-wide mb-1.5">Soft skills</p>
             <div>{softSkills.map((s) => <Tag key={s} label={s} variant="soft" />)}</div>
           </div>
         )}
@@ -198,13 +198,13 @@ export default function ProfilesComponent({ profiles }: { profiles: Profile[] })
 
   return (
     <main className="p-8 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-medium text-gray-900 mb-6">Profiles</h1>
+      <h1 className="text-2xl font-medium text-text-primary mb-6">Profiles</h1>
 
       <FilterBar filters={filters} onChange={setFilters} />
 
       {/* result count */}
       {isFiltering && (
-        <p className="text-sm text-gray-400 mb-4">
+        <p className="text-sm text-text-muted mb-4">
           {visible.length} profile{visible.length !== 1 ? 's' : ''} match
           {visible.length === 1 ? 'es' : ''} your filters
         </p>
@@ -219,7 +219,7 @@ export default function ProfilesComponent({ profiles }: { profiles: Profile[] })
             />
           ))
         ) : (
-          <div className="text-center py-16 text-gray-400">
+          <div className="text-center py-16 text-text-muted">
             <p className="text-lg">No profiles match the selected filters.</p>
           </div>
         )}

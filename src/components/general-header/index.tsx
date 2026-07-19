@@ -1,5 +1,4 @@
 'use client'
-import ThemeToggle from '@/components/ThemeToggle'
 import Link from "next/link"
 
 export default function GeneralHeader() {
@@ -14,7 +13,6 @@ export default function GeneralHeader() {
             J42 Marseille
           </Link>
         </div>
-        <ThemeToggle />
       </div>
     </nav>
   )

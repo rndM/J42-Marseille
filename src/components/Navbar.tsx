@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import ThemeToggle from '@/components/ThemeToggle'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,7 +34,6 @@ export default function Navbar() {
           <a href="https://voting-app-pi-one.vercel.app/" className="nav-link" target="_blank" rel="noopener noreferrer">
             Espace membre
           </a>
-          <ThemeToggle />
         </div>
 
         {/* Bouton Hamburger */}
@@ -88,9 +86,7 @@ export default function Navbar() {
           >
             Espace membre
           </a>
-          <div className="pt-2 border-t border-border-default">
-            <ThemeToggle />
-          </div>
+
         </div>
       )}
     </nav>

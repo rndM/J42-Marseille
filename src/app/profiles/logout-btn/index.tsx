@@ -15,8 +15,8 @@ export default function Logoutbutton({className = ''}: LogoutbuttonProps) {
 	return (
         <button
             onClick={handleLogout}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border-2 border-gray-400 hover:border-teal-600
-                text-gray-500 hover:text-teal-600 hover:bg-teal-50 transition-colors duration-200 ${className}`}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border-2 border-border-default hover:border-teal-600
+                text-text-muted hover:text-teal-400 hover:bg-teal-900/30 transition-colors duration-200 ${className}`}
                 // text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors duration-200 ${className}`}
             >
             <LogOut className="w-4 h-4" />

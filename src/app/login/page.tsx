@@ -41,10 +41,10 @@ function LoginForm() {
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                     required
-                    className="p-2 text-base mb-4 border-2 border-slate-300"
+                    className="p-2 text-base mb-4 border-2 border-border-default bg-surface-primary text-text-primary placeholder-gray-500"
                 />
                 {error && <p className="text-red-500 m-0">{error}</p>}
-                <button type="submit" disabled={loading} className="p-2 text-base text-black cursor-pointer bg-teal-200">
+                <button type="submit" disabled={loading} className="p-2 text-base text-white cursor-pointer bg-teal-700 hover:bg-teal-600">
                     {loading ? 'Checking...' : 'Enter'}
                 </button>
             </form>

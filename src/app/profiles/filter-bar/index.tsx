@@ -40,10 +40,10 @@ function SkillToggle({
   const styles = {
     mastered: active
       ? 'bg-teal-600 text-white border-teal-600 shadow-sm'
-      : 'bg-white text-teal-700 border-teal-300 hover:bg-teal-50',
+      : 'bg-surface-primary text-teal-300 border-teal-700 hover:bg-teal-900/30',
     toDevelop: active
       ? 'bg-amber-500 text-white border-amber-500 shadow-sm'
-      : 'bg-white text-amber-700 border-amber-300 hover:bg-amber-50',
+      : 'bg-surface-primary text-amber-300 border-amber-700 hover:bg-amber-900/30',
   };
 
   return (
@@ -76,15 +76,15 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
   const hasActive = filters.mastered.length > 0 || filters.toDevelop.length > 0;
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl pt-5 px-12 pb-10 mb-6 flex flex-col gap-4">
+    <div className="bg-surface-primary border border-border-default rounded-xl pt-5 px-12 pb-10 mb-6 flex flex-col gap-4">
       {/* Mastered */}
-      <h3 className="text-lg text-center text-gray-500 uppercase tracking-widest font-medium">
+      <h3 className="text-lg text-center text-text-muted uppercase tracking-widest font-medium">
         Filters
       </h3>
       <div>
         <div className="flex items-center gap-2 mb-4">
           <span className="w-2 h-2 rounded-full bg-teal-500 shrink-0" />
-          <p className="text-sm text-gray-400 uppercase tracking-wide font-medium">
+          <p className="text-sm text-text-muted uppercase tracking-wide font-medium">
             Mastered skills
           </p>
         </div>
@@ -102,13 +102,13 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
       </div>
 
       {/* Divider */}
-      <hr className="border-gray-100 my-4" />
+      <hr className="border-border-subtle my-4" />
 
       {/* To develop */}
       <div>
         <div className="flex items-center gap-2 mb-4">
           <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0" />
-          <p className="text-sm text-gray-400 uppercase tracking-wide font-medium">
+          <p className="text-sm text-text-muted uppercase tracking-wide font-medium">
             Skills to develop
           </p>
         </div>
@@ -131,7 +131,7 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
           <button
             type="button"
             onClick={() => onChange({ mastered: [], toDevelop: [] })}
-            className="text-xs text-gray-400 hover:text-gray-600 underline transition-colors"
+            className="text-xs text-text-muted hover:text-text-secondary underline transition-colors"
           >
             Clear all filters
           </button>

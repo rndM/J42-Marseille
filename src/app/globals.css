@@ -21,71 +21,22 @@
   --color-violet: #66008C;
 }
 
-/* Mode clair (défaut) - Basé sur la palette Minimalist de 42 */
+/* Mode sombre unique (dark theme only) */
 :root {
-  --surface-primary: var(--color-blanc);
-  --surface-secondary: var(--color-bubbles);
-  --surface-tertiary: var(--color-bright-gray);
-  --surface-mobile-menu: #F5F5F5;
-  
-  --text-primary: var(--color-noir);
-  --text-secondary: var(--color-dark-slate-gray);
-  --text-muted: var(--color-cadet-gray);
-  
-  --border-default: var(--color-cadet-gray);
-  --border-subtle: var(--color-bubbles);
-  
-  --primary: var(--color-42-blue);
-  --primary-hover: var(--color-cg-blue);
-}
-
-/* Mode sombre (auto) - Adapté à la charte 42 */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --surface-primary: var(--color-noir);
-    --surface-secondary: #0a0f10;
-    --surface-tertiary: var(--color-dark-slate-gray);
-    --surface-mobile-menu: #2A2A2A;
-    
-    --text-primary: var(--color-blanc);
-    --text-secondary: var(--color-light-cobalt-blue);
-    --text-muted: var(--color-cadet-gray);
-    
-    --border-default: var(--color-cg-blue);
-    --border-subtle: var(--color-dark-slate-gray);
-    
-    --primary: var(--color-42-blue);
-    --primary-hover: var(--color-light-cobalt-blue);
-  }
-}
-
-/* ===== FORCER UN THÈME VIA CLASSE (toggle) ===== */
-[data-theme="dark"] {
   --surface-primary: var(--color-noir);
   --surface-secondary: #0a0f10;
   --surface-tertiary: var(--color-dark-slate-gray);
   --surface-mobile-menu: #2A2A2A;
+  
   --text-primary: var(--color-blanc);
   --text-secondary: var(--color-light-cobalt-blue);
   --text-muted: var(--color-cadet-gray);
+  
   --border-default: var(--color-cg-blue);
   --border-subtle: var(--color-dark-slate-gray);
+  
   --primary: var(--color-42-blue);
   --primary-hover: var(--color-light-cobalt-blue);
-}
-
-[data-theme="light"] {
-  --surface-primary: var(--color-blanc);
-  --surface-secondary: var(--color-bubbles);
-  --surface-tertiary: var(--color-bright-gray);
-  --surface-mobile-menu: #F5F5F5;
-  --text-primary: var(--color-noir);
-  --text-secondary: var(--color-dark-slate-gray);
-  --text-muted: var(--color-cadet-gray);
-  --border-default: var(--color-cadet-gray);
-  --border-subtle: var(--color-bubbles);
-  --primary: var(--color-42-blue);
-  --primary-hover: var(--color-cg-blue);
 }
 
 /* ===== BASE STYLES ===== */
