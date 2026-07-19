@@ -9,6 +9,8 @@
 
 ---
 
+![Next.js](https://img.shields.io/badge/Next.js-16-black) ![React](https://img.shields.io/badge/React-19-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4)
+
 Site vitrine officiel de l'association entrepreneuriale de l’école 42 Marseille, développé bénévolement pour accompagner l’association dans sa visibilité en ligne et faciliter la prise de contact avec ses prospects.
 
 L’application est déployée ici : [https://j42marseille.vercel.app/](https://j42marseille.vercel.app/)

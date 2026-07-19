@@ -8,6 +8,8 @@
 
 ---
 
+![Next.js](https://img.shields.io/badge/Next.js-16-black) ![React](https://img.shields.io/badge/React-19-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4)
+
 Official showcase site of the entrepreneurial association of 42 Marseille, developed voluntarily to support the association's online visibility and facilitate contact with prospects.
 
 The application is deployed here: [https://j42marseille.vercel.app/](https://j42marseille.vercel.app/)
